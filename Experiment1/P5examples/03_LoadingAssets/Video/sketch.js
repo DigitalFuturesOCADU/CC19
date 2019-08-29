@@ -15,7 +15,7 @@ function setup()
   createCanvas(800,800);
   getAudioContext().resume();
   // specify multiple formats for different browsers
-  gloves = createVideo(['GoGoGloves.mp4']);
+  gloves = createVideo(['GoGoGloves_vid.mp4']);
   gloves.hide();
   button = createButton('play');
   button.mousePressed(toggleVid); // attach button listener
@@ -24,7 +24,7 @@ function setup()
 function draw()
 {
 background(100);
-image(gloves, 400,400);
+image(gloves, mouseX,mouseY);
 
 }
 
