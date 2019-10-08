@@ -9,13 +9,13 @@
  */
 
 
-int ledPin1 = 3;   //define the pins that the LEDs will be attached to
+int ledPin1 = 13;   //define the pins that the LEDs will be attached to
 int ledPin2 = 4;
 int ledPin3 = 5;
 int ledPin4 = 6;
 
-int blinkRate1 = 400;   //define the corresponding rates
-int blinkRate2 = 500;
+int blinkRate1 = 1000;   //define the corresponding rates
+int blinkRate2 = 100;
 int blinkRate3 = 200;
 int blinkRate4 = 1000;
 

@@ -12,17 +12,32 @@
 int ledPin1 = 4;           //the pin the LED is attached to pin 13 attaches to an internal LED  
 int blinkRate = 1000;        //the time between blinks in milliseconds
 boolean ledState1 = false;
-
-
 long lastTimeYouBlinked;  //this stores the time of the last change
+
+///////////////////////////////////////
+
+int pinNumber = 2; //the pin the pulsewidth is read on
+int distanceMM; //variable that holds the reading
+
+
+////////////////////////////////////////
 
 
 void setup() {
-  pinMode(ledPin1, OUTPUT);                  //Set the pin to output mode
+  pinMode(ledPin1, OUTPUT);
+  pinMode(pinNumber,INPUT);  //since we are using a digital pin, we must set tell it that it will be an INPUT
+
+  Serial.begin(9600);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+distanceMM = pulseIn(pinNumber, HIGH);
+Serial.print("Distance to object in MM: ");//print the value to the console
+Serial.println(distanceMM);
+
+
+blinkRate = distanceMM;
 
 if(millis()-lastTimeYouBlinked>=blinkRate) //this very simple statement is the timer,
 {                                          //it subtracts the value of the moment in time the last blink happened, and sees if that number is larger than your set blinking value

@@ -10,9 +10,9 @@
 
 #include <Servo.h>
 
-int servoPin1 = 10;           //Pin that the servo is attached to.
+int servoPin1 = 9;           //Pin that the servo is attached to.
 int moveRate = 10;        //the time between updates in milliseconds
-int minAngle = 0;     //sets the low point of the movement range
+int minAngle = 100;     //sets the low point of the movement range
 int maxAngle = 180;   //sets the high point of the movement range
 int moveIncrement = 1;    // how much to move the motor each cycle 
 int servoAngle1;
@@ -28,7 +28,7 @@ servoAngle1=minAngle;
 }
 
 void loop() {
- if(millis()-lastTimeYouMoved1>=moveRate) //this very simple statement is the timer,
+if(millis()-lastTimeYouMoved1>=moveRate) //this very simple statement is the timer,
 {                                          //it subtracts the value of the moment in time the last blink happened, and sees if that number is larger than your set blinking value
 servo1.write(servoAngle1);
 
