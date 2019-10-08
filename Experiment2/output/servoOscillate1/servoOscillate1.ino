@@ -16,9 +16,9 @@ int sensorVal1;
 void setup() 
 {
 s1.attach(s1Pin);
-  
+pinMode(sensorPin1,INPUT);  
   // put your setup code here, to run once:
-
+Serial.begin(9600);
 }
 
 void loop()
@@ -26,10 +26,10 @@ void loop()
 ///remember how to read from distance sensor and do that...
 
 distance1 = pulseIn(sensorPin1,HIGH);///read from the distance sensor
-
+Serial.println(distance1);
 if(distance1<=threshhold1)  ///check if that value is smaller than the threshhold
 {
-  speedValue1 = 0.7         ///YES!!, change the speedValue be faster
+  speedValue1 = 0.7 ;        ///YES!!, change the speedValue be faster
 }
 else
 { 
