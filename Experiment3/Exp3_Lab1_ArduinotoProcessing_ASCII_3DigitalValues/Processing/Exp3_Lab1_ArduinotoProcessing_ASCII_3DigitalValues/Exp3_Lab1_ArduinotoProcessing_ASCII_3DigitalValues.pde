@@ -1,5 +1,4 @@
 /*
-   DIGF 2004 Atelier 1
    DIGF 6037 Creation & Computation
    Kate Hartman & Nick Puckett
    Experiment 3 - Lab 1
@@ -20,7 +19,7 @@ void setup() {
   // List all the available serial ports in the console
   printArray(Serial.list());
 
-  // Change the 0 to the appropriate number of the serial port
+  // Change the 6 to the appropriate number of the serial port
   // that your microcontroller is attached to.
   String portName = Serial.list()[6];
   myPort = new Serial(this, portName, 9600);

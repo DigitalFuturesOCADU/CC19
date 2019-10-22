@@ -80,7 +80,7 @@ void serialEvent(Serial myPort) {
     sensor2 = sensors[1]; 
     sensor3 = sensors[2];
     mappedSensor1 = map(sensor1, 0, 1023, height, 0);
-    mappedSensor2 = map(sensor1, 0, 1023, height, 0);
-    mappedSensor3 = map(sensor1, 0, 1023, height, 0);
+    mappedSensor2 = map(sensor2, 0, 1023, height, 0);
+    mappedSensor3 = map(sensor3, 0, 1023, height, 0);
   }
 }
