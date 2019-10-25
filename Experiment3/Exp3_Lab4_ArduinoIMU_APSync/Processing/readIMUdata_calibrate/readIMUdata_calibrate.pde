@@ -23,6 +23,7 @@ import controlP5.*;
 AP_Sync readVals; //create apsync variable to read from   
 
 ControlP5 controller; //create cp5 variable to attach interface items to
+boolean showController = true;
 
 float cpX;
 float cpY;
@@ -76,4 +77,18 @@ float cpZ;
    text((ax-cpX)+" : "+(ay-cpY)+" : "+(az-cpZ),width/2,height/2);
    
    
+ }
+ 
+ void keyPressed()
+ {
+  showController = !showController;
+  if(showController)
+  {
+    controller.show();
+  }
+  else
+  {
+    controller.hide();
+  }
+  
  }
