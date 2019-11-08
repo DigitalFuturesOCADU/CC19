@@ -94,6 +94,6 @@ function readIncoming(inMessage) //when new data comes in it triggers this funct
   // simple error check to match the incoming to the channelName
   if(inMessage.channel == channelName)
   {
-  incomingText = inMessage.message.who+" says "+inMessage.message.messageText;
+  incomingText = inMessage.message.who+" SAYS "+inMessage.message.messageText;
   }
 }

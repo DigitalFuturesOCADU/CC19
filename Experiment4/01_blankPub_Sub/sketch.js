@@ -68,6 +68,8 @@ function readIncoming(inMessage) //when new data comes in it triggers this funct
   if(inMessage.channel == channelName)
   {
 
-    console.log(inMessage);
+    console.log(inMessage.message.messageText);
   }
 }
+
+

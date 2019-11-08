@@ -50,12 +50,12 @@ function setup()
   sendButton.mousePressed(sendTheMessage);
 
 
-  fill(0, 100);
+  fill(0, 50);
 }
 
 function draw() 
 {
-    //background(255);
+    background(255);
     noStroke();
     
     textSize(randSize)
